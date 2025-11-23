@@ -50,4 +50,10 @@ Use the following details to jump right into testing the system:
 2.  **Enter Account ID:** Provide the Account ID you wish to use (e.g., `1001`).
 3.  **PIN Validation:** If you select a service that requires security (like Withdrawal or Profile Check), you'll be prompted to enter your 4-digit PIN.
 4.  **Complete Transaction:** Follow the prompts to finalize your action.
+**SCREENSHOTS**
+![WhatsApp Image 2025-11-23 at 15 09 30_1a05fd71](https://github.com/user-attachments/assets/0e6f10b7-0bf5-4aa6-835e-9aea3a9abfe5)
+![WhatsApp Image 2025-11-23 at 15 10 12_11f51b82](https://github.com/user-attachments/assets/4d033cb0-926e-4a5b-abfe-46b75640ec2d)
+![WhatsApp Image 2025-11-23 at 15 08 31_6c9405f7](https://github.com/user-attachments/assets/7a4836cd-58c0-4218-a15b-3864f1f741ef)
+![WhatsApp Image 2025-11-23 at 15 10 52_fca85283](https://github.com/user-attachments/assets/db04ee54-8ad4-4e0a-9da4-f38f6e99d497)
+
 **Remember:** Your financial actions are instantly saved\! Any changes to your **balance** or **PIN** are immediately written back to the `dataset.csv` file, preserving your progress for the next time you run the simulator.

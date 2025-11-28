@@ -210,7 +210,7 @@ This ATM Management System provides a complete demonstration of:
 
     E.Persistent storage using CSV files
     
-**NOTE: ** To run the program make sure that dataset.py file is executed first.
+**NOTE**:  To run the program make sure that dataset.py file is executed first.
 
 It is ideal for academic projects, demonstrations, and learning exercises involving Python fundamentals.
 

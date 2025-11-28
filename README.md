@@ -158,13 +158,13 @@ Below are example screenshots from the ATM CLI:
 
  
 
-4. Account Profile
+3. Account Profile
 
 ![WhatsApp Image 2025-11-28 at 12 06 11_618002f1](https://github.com/user-attachments/assets/56b9df53-6372-41f3-98dd-57b216953b7f)
 
  
 
-6. Cash Deposit
+4. Cash Deposit
 
 ![WhatsApp Image 2025-11-28 at 12 06 10_916f8b70](https://github.com/user-attachments/assets/734707c1-8975-4c78-946f-5bf295363fc7)
 

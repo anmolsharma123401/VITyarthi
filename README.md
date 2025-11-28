@@ -1,59 +1,216 @@
-Python ATM Simulator: Your Command-Line Bank 
+**ATM Management System**
 
-Welcome to the **Python ATM Simulator** This is a simple, yet robust command-line application designed to mimic the core functions of a real ATM, using a local **CSV file** for data storage.
+**Python (CSV-Based CLI Application)**
 
-Key Features
+**ATM Management System – Command-Line Python Application**
 
-**Persistent Data Storage:** Your account details (ID, Name, PIN, and Balance) are safely stored in an `dataset.csv` file. Any changes—deposits, withdrawals, or PIN updates—are **immediately saved**, so your data is right where you left it for the next session.
-  * **Essential ATM Services:**
-      * **Cash Withdrawal:** Smartly deducts the amount after checking that you have enough funds.
-      * **Cash Deposit:** Instantly increases your account balance.
-      * **Change PIN:** Update your secure 4-digit PIN with ease.
-      * **Account Profile:** Quick check of your current details and balance.
-  * **Built-in Security & Validation:** We keep things safe and sound\!
-    1.  **Strict Authentication:** Your Account ID and PIN are required for all sensitive transactions (Withdrawal, Profile Check).
-    2.  **Insufficient Funds Check:** Prevents you from overdrawing your account.
-    3.  **Input Integrity:** All money-related inputs are validated to ensure they are positive, numerical values.
+**Overview of the Project**
 
- Component
-**Language: ** **Python 3.x**
-**Libraries Used: ** `csv` (Standard library for file handling) and `sys` (For controlled program exit) 
-**Data Storage: **  **CSV File** (Simple, human-readable Comma Separated Values) 
+This project is a command-line ATM simulator built in Python. It allows users to perform essential banking transactions such as cash withdrawal, cash deposit, PIN change, and profile viewing.
+The system uses CSV (Comma Separated Values) files for persistent storage, meaning all account updates—balance changes, PIN updates—are saved permanently and reflected in future sessions.
+The purpose of the project is to demonstrate:
 
+**A. Python file handling**
 
-Get Started
+**B. Data persistence**
 
-1. Setup
+**C. Input validation**
 
-The initial run of the script handles the file setup for you—no manual work needed!
+**D. Modular programming with functions**
 
-1.  **Save the Code:** Save the entire provided code block into a single file named **`atm_simulator.py`**.
-2.  **First Run Magic:** The very first time you execute the file, it will **automatically create** the required **`dataset.csv`** file with sample data in the same directory.
+**E. Error-handling and user interaction**
 
-2. Execution
+**Features:**
 
-Open your terminal or command prompt, navigate to the directory where you saved `atm_simulator.py`, and run the following command:
+**1. Cash Withdrawal**
+   
+    A. Requires valid Account ID and PIN
+    B. Checks for sufficient balance
+    C. Deducts the requested amount
+    D. Updates balance in dataset.csv
+    
+**2. Cash Deposit**
+   
+    A. Accepts only positive numeric values
+    B. Updates account balance immediately
+    C. Saves changes to CSV in real-time
+   
+   
+**3. PIN Change**
 
-**python atm_simulator.py**
+    A. Ensures new PIN is exactly 4 digits
+    B. Updates account’s PIN
+    C. Saves securely in CSV
+   
+**4. Account Profile**
 
-3.  Sample Account Data
+    A. Displays Name, Account Number, PIN, and Balance
+    B. Access protected by PIN validation
+   
+**5. Input Validation**
 
-Use the following details to jump right into testing the system:
+    A. Handles non-numeric service input
+    B. Rejects invalid or negative amounts
+    C. Validates PIN format
+    D. Detects missing/incorrect account IDs
 
-['ACC_ID', 'NAME', 'ACC_NUMBER', 'PIN', 'BALANCE']
-{'ACC_ID': '1001', 'NAME': 'KARAN', 'ACC_NUMBER': '10196', 'PIN': '1204', 'BALANCE': '56880.00'},
+**Security & Validation**
 
+To ensure safe and reliable usage, the system includes:
 
-## How to Use
+    Account ID verification
+  
+    PIN authentication for sensitive actions
+  
+    Insufficient balance check during withdrawals
+  
+    Positive numeric validation for deposit/withdrawal
+  
+    Strict 4-digit format check for PIN changes
+  
+    Error-handling for invalid input, unrecognized accounts, or corrupted data files
+  
+**These validations prevent accidental errors and unauthorized access.**
 
-1.  **Main Menu:** Upon execution, the main menu will appear, asking you to select a service (1-4).
-2.  **Enter Account ID:** Provide the Account ID you wish to use (e.g., `1001`).
-3.  **PIN Validation:** If you select a service that requires security (like Withdrawal or Profile Check), you'll be prompted to enter your 4-digit PIN.
-4.  **Complete Transaction:** Follow the prompts to finalize your action.
-**SCREENSHOTS**
-![WhatsApp Image 2025-11-23 at 15 09 30_1a05fd71](https://github.com/user-attachments/assets/0e6f10b7-0bf5-4aa6-835e-9aea3a9abfe5)
-![WhatsApp Image 2025-11-23 at 15 10 12_11f51b82](https://github.com/user-attachments/assets/4d033cb0-926e-4a5b-abfe-46b75640ec2d)
-![WhatsApp Image 2025-11-23 at 15 08 31_6c9405f7](https://github.com/user-attachments/assets/7a4836cd-58c0-4218-a15b-3864f1f741ef)
-![WhatsApp Image 2025-11-23 at 15 10 52_fca85283](https://github.com/user-attachments/assets/db04ee54-8ad4-4e0a-9da4-f38f6e99d497)
+**Technologies / Tools Used**
 
-**Remember:** Your financial actions are instantly saved\! Any changes to your **balance** or **PIN** are immediately written back to the `dataset.csv` file, preserving your progress for the next time you run the simulator.
+  **Language:**
+  
+        Python 3.x
+  
+  **Libraries:**
+  
+    csv → for reading/writing account data
+    sys → for controlled program exits
+  **Data Storage:**
+  
+    dataset.csv file storing:
+      ACC_ID
+      NAME
+      ACC_NUMBER
+      PIN
+      BALANCE
+  No external dependencies are required.
+
+**Steps to Install & Run the Project**
+  1. Install Python
+    Make sure Python 3.x is installed:
+
+  3. Prepare the Accounts CSV File
+     
+     Create a file named dataset.csv in the same folder as your script.
+    
+      Use this structure:
+     
+            [ACC_ID 	NAME	 ACC_NUMBER	 PIN	  BALANCE]
+            [1001  	 KARAN       10196	1204	 56880.00]
+        You may add or modify entries as needed.
+  4. Save the Python File
+     Save your ATM program as:
+
+         atm.py
+  5. Run the Program
+     
+     Navigate to the folder and execute:
+     
+          python atm.py
+
+**Instructions for Testing**
+
+When the script runs, you will see:
+
+Welcome to our ATM
+
+1.Cash Withdrawal
+
+2.Change PIN
+   
+3.Account Profile
+ 
+4.Cash Deposit
+
+Steps to Test: 
+
+    1.Choose a service (1–4)
+    2.Enter a valid Account ID (e.g., 1001)
+    3.Enter PIN (required for Withdrawal & Profile Check)
+    4.Follow the on-screen instructions to complete the transaction
+Sample Testing Accounts
+
+    ACC_ID  NAME     ACC_NUMBER	            PIN	          BALANCE
+  
+    1001   	KARAN	  10196                 1204	      56880.00
+    1002   	RAM	      19567                 1946	      28400.00
+    1003    ANMOL     78546                 1256          17000.00
+
+Screenshots
+Below are example screenshots from the ATM CLI:
+
+1.Cash Withdrawal
+
+![WhatsApp Image 2025-11-28 at 12 06 11_e91b3d90](https://github.com/user-attachments/assets/7db9b138-4724-4029-ad09-6298a3041544)
+
+ 
+
+2. Change PIN
+
+ ![WhatsApp Image 2025-11-28 at 12 06 11_ca14c785](https://github.com/user-attachments/assets/236b51a0-8820-43c2-afd1-d7330e5824fb)
+
+ 
+
+4. Account Profile
+
+![WhatsApp Image 2025-11-28 at 12 06 11_618002f1](https://github.com/user-attachments/assets/56b9df53-6372-41f3-98dd-57b216953b7f)
+
+ 
+
+6. Cash Deposit
+
+![WhatsApp Image 2025-11-28 at 12 06 10_916f8b70](https://github.com/user-attachments/assets/734707c1-8975-4c78-946f-5bf295363fc7)
+
+ 
+  
+**Persistent Data Storage**
+
+Every update made through the ATM (withdrawal, deposit, PIN change) is immediately written back to dataset.csv
+
+This ensures:
+
+    A.No data loss
+
+    B.Real-time account updates
+
+    C.Reliable behaviour over multiple runs
+
+**Future Enhancements** 
+
+You may extend the project by adding:
+
+    A.Transaction history logs
+
+    B.Admin dashboard
+
+    C.Account creation/deletion
+
+    D.GUI interface (Tkinter/PyQt)
+
+    E.Encryption for PIN storage
+
+**Conclusion**
+
+This ATM Management System provides a complete demonstration of:
+
+    A.Python file handling
+
+    B.Data validation
+
+    C.Modular program design
+
+    D.Safe user authentication
+
+    E.Persistent storage using CSV files
+    
+**NOTE: ** To run the program make sure that dataset.py file is executed first.
+
+It is ideal for academic projects, demonstrations, and learning exercises involving Python fundamentals.
+
